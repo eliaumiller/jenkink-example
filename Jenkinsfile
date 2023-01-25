@@ -19,7 +19,7 @@ pipeline {
 				}
 			}
 		
-		stage('WaitPeriod') {
+/*		stage('WaitPeriod') {
 				steps {
 					script{
 							def currentTime = new Date()
@@ -34,7 +34,7 @@ pipeline {
 					sleep(time:"${difference}", unit: "MILLISECONDS")
 					}
 				}
-			}   
+			}   */
 		}
     post {         
          always {
