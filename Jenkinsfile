@@ -18,6 +18,7 @@ pipeline {
 		
 		stage('WaitPeriod') {
     script {
+	import java.text.SimpleDateFormat 
         def currentTime = new Date()
         String nextStageStartTimeFormat = currentTime.format("dd/MM/yyyy") + " 19:00"
         def nextStageStartTime = new SimpleDateFormat("dd/MM/yyyy HH:mm").parse(nextStageStartTimeFormat)
