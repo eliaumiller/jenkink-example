@@ -1,4 +1,5 @@
 import jxl.*
+import java.time.format.DateTimeFormatter
 pipeline {
     agent any
 
@@ -19,7 +20,6 @@ pipeline {
 		
 		stage('WaitPeriod') {
     script {
-		import java.time.format.DateTimeFormatter
 	    def currentTime = new Date()
         String nextStageStartTimeFormat = currentTime.format("dd/MM/yyyy") + " 19:00"
         def nextStageStartTime = new SimpleDateFormat("dd/MM/yyyy HH:mm").parse(nextStageStartTimeFormat)
