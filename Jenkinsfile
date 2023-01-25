@@ -20,7 +20,7 @@ pipeline {
         }
 		
 		stage('WaitPeriod') {
-    steps {
+ //   steps {
 	    def currentTime = new Date()
         String nextStageStartTimeFormat = currentTime.format("dd/MM/yyyy") + " 19:00"
         def nextStageStartTime = new SimpleDateFormat("dd/MM/yyyy HH:mm").parse(nextStageStartTimeFormat)
@@ -31,7 +31,7 @@ pipeline {
         }
         println "Difference(milliseconds): " + difference
         sleep(time:"${difference}", unit: "MILLISECONDS")
-    }
+//    }
 }
 
 
